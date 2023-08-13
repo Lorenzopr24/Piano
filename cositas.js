@@ -5,7 +5,7 @@ const tecWh = [
   document.getElementById("F"),
   document.getElementById("G"),
   document.getElementById("A"),
-  document.getElementById("B")
+  document.getElementById("B"),
 ];
 
 const tecBl = [
@@ -13,25 +13,21 @@ const tecBl = [
   document.getElementById("DS"),
   document.getElementById("FS"),
   document.getElementById("GS"),
-  document.getElementById("AS")
+  document.getElementById("AS"),
 ];
 
-tecWh.forEach((teclas) => {
-  teclas.style.width = "75px";
-  teclas.style.height = "250px";
+tecWh.forEach((tecla) => {
+  tecla.style.width = "75px";
+  tecla.style.height = "250px";
 });
 
-tecBl.forEach((teclas) => {
-  teclas.style.width = "40px";
-  teclas.style.height = "160px";
-  teclas.style.position = "absolute";
+tecBl.forEach((tecla, index) => {
+  tecla.style.width = "40px";
+  tecla.style.height = "160px";
+  tecla.style.position = "absolute";
 
-  const posicionesX = [35, 92, 200, 257, 295];
-  teclas.style.left = posicionesX[0] + "px";
-  teclas.style.left = posicionesX[1] + "px";
-  teclas.style.left = posicionesX[2] + "px";
-  teclas.style.left = posicionesX[3] + "px";
-  teclas.style.left = posicionesX[4] + "px";
+  const posicionesX = [57, 137, 297, 377, 457];
+  tecla.style.left = posicionesX[index] + "px";
 });
 
 tecWh[0].addEventListener("click", () => console.log("q"));
